@@ -3,6 +3,8 @@ orbs:
   node: circleci/node@3.0.0
 jobs:
   main-test:
+    docker:
+      - image: circleci/node:10.8.0
     working-directory: ~/Turtle/front-end
 workflows:
   node-tests:
