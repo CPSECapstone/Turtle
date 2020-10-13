@@ -1,7 +1,11 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
+jobs:
+  main-test:
+    working-directory: ~/Turtle/front-end
 workflows:
   node-tests:
     jobs:
+      - main-test
       - node/test
