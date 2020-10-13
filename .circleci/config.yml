@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run: cd ~/Turtle/front-end
-      - run: node/test
+      - node/test
 workflows:
   node-tests:
     jobs:
