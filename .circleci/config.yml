@@ -2,14 +2,15 @@ version: 2.1
 orbs:
   node: circleci/node@3.0.0
 jobs:
-  main-test:
+  build:
     docker:
       - image: circleci/node:10.8.0
     working_directory: ~/Turtle/front-end
     steps:
       - checkout
+      - run: cd ~/Turtle/front-end
+      - run: node/test
 workflows:
   node-tests:
     jobs:
       - main-test
-      - node/test
