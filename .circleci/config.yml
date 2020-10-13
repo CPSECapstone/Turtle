@@ -13,4 +13,4 @@ jobs:
 workflows:
   node-tests:
     jobs:
-      - main-test
+      - build
