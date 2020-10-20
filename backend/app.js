@@ -1,14 +1,29 @@
-const http = require('http');
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import * as actionCreators from './actions/actionCreators';
+import Main from '../frontend/src/components/Main/Main';
 
-const hostname = '127.0.0.1';
-const port = 3000;
+// State properties automatically passed to Main
+// How to get redux store content into our code
+function mapStateToProps(state) {
+   return {
+    //   Prss: state.Prss,
+    //   Msgs: state.Msgs,
+    //   Likes: state.Likes,
+    //   Errs: state.Errs,
+   };
+}
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+// Function properties automatically passed to Main
+function mapDispatchToProps(dispatch) {
+   return bindActionCreators(actionCreators, dispatch);
+}
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+const App = connect(
+   mapStateToProps,
+   mapDispatchToProps
+)(Main);
+
+
+export default withRouter(App);
