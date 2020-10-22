@@ -6,16 +6,16 @@
   
  **Tokenization** The process of turning sensitive pieces of data into a non-sensitive random string of characters that has no value if breached.
  
- **Vendor Nuetral** A product (hardware or software), technology or specification that is not proprietary by one vendor.
+ **Vendor Nuetral** 
  
- **API** Applicatoin Programming Interface. A computing interface which defines interactions between software intermediaries. Essentially allows for 2 apllications to talk to each other.
+ **API** Applicatoin Porgramming Interface. A computing interface which defines interactions between software intermediaries. Essentially allows for 2 apllications to talk to each other.
  
- **User Privacy** The level of privacy protection an individual has while connected to the Internet.
+ **User Privacy**
  
- **Password Manager** A software application or a hardware device used to store and manage a person's passwords.
+ **Password Manager**
  
- **Cloud Service** Servers that are accessed over the Internet, and the software and databases that run on those servers
+ **Cloud**
  
-**User Management**  The method by which you create, remove and maintain your user storage.
+**User Management**
 
-**Centralized Data** The information is collected, stored, and maintained in one location, but is accessible from many points.
+**Centralized Data**
