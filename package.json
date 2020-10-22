@@ -1,0 +1,20 @@
+{
+  "name": "chs",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "main.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "async": "^2.0.0-rc.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "mysql": "^2.11.1",
+    "reactjs-popup": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "author": [
+    "Joseph Soboleski"
+  ]
+}
