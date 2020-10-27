@@ -16,9 +16,9 @@
  
  **Cloud Service** Servers that are accessed over the Internet, and the software and databases that run on those servers
  
-**User Management**  The method by which you create, remove and maintain your user storage.
+**User Management** The method by which you create, remove and maintain your user storage.
 
-**Centralized Data**
+**Centralized Data** The information is collected, stored, and maintained in one location, but is accessible from many points.
 
 **Components**
 
