@@ -22,9 +22,9 @@
 
 **Components**
     Box {
-        color : this sets the color of the box;
-        height : specifies the height of the box in pixels;
-        width : specifies the widith of the box in pixels;
+        color : this sets the color of the box
+        height : specifies the height of the box in pixels
+        width : specifies the widith of the box in pixels
     }
 
     Text Field {
