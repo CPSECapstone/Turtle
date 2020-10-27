@@ -19,3 +19,16 @@
 **User Management**
 
 **Centralized Data**
+
+**Components**
+    Box {
+        color : this sets the color of the box;
+        height : specifies the height of the box in pixels;
+        width : specifies the widith of the box in pixels;
+    }
+
+    Text Field {
+        color : this sets the text's color
+        text size : size of the text
+        text : the actual text to be displayed
+    }
