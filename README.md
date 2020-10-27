@@ -29,6 +29,6 @@
 
     Text Field {
         color : this sets the text's color
-        text size : size of the text
+        font_size : size of the text
         text : the actual text to be displayed
     }
