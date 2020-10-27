@@ -21,6 +21,7 @@
 **Centralized Data**
 
 **Components**
+
     Box {
         color : this sets the color of the box
         height : specifies the height of the box in pixels
