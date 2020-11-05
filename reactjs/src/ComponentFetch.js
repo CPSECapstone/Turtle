@@ -1,16 +1,14 @@
 import React, {Component} from 'react'
-import data from 'devComponents'
+import data from "./mockInputs/devComponents.json"
 
 class ComponentFetch extends Component {
   constructor ()
 {
   super();
-  this.state = {data : data.components};
 }
 
-
 render() {
-  const results = this.state.data.map((value) =>
+  const results = data.components.map((value) =>
     <div>
       <l><u>Component {value.id}</u></l>
       <ul>type : {value.type}</ul>

@@ -1,0 +1,18 @@
+{
+    "components" : [
+        {
+            "id" : 1,
+            "type" : "box",
+            "color" : "red",
+            "height" : 200,
+            "width" : 350
+        },
+        {
+            "id" : 2,
+            "type" : "text",
+            "color" : "red",
+            "height" : 50,
+            "width" : 150
+        }
+    ]
+}
