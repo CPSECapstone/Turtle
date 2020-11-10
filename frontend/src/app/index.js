@@ -47,7 +47,12 @@ function App () {
                     <NavBar />
 
                     <Switch>
-                        <Route exact path='/' component={NewPage}/>
+                        <Route
+                            exact
+                            path='/'
+                            component={() => <Redirect to='/newpage' />}
+                        />
+                        <Route exact path='/newpage' component={NewPage}/>
                         <Route exact path='/login' component={Login} />
                         <Route exact path='/register' component={Register} />
                         <PrivateRoute exact path='/home' component={Home} />
