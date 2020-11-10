@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const passport = require("passport");
 
 const users = require("./routes/api/users");
-const devApi = require("/routes/api/devApi");
+const devApi = require("./routes/api/devApi");
 
 const app = express();
 const apiPort = 3000;
