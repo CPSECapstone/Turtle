@@ -56,14 +56,6 @@ function App () {
                         <Route exact path='/login' component={Login} />
                         <Route exact path='/register' component={Register} />
                         <PrivateRoute exact path='/home' component={Home} />
-                        {/* <Route
-                            exact
-                            path='/'
-                            component={() => <Redirect to='/login' />}
-                        />
-                        <Route exact path='/login' component={Login} />
-                        <Route exact path='/register' component={Register} />
-                        <PrivateRoute exact path='/home' component={Home} /> */}
                     </Switch>
                 </div>
             </Router>
