@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+//temp data storage
+const screens = [];
+
 //function to get the intial screen from a dev app
 router.get('/getScreen', function (req, res) {
     console.log(req.headers);

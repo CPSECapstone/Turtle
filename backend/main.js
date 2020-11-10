@@ -34,6 +34,6 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
-app.use("/api/devApi", devApi);
+app.use("/devApi", devApi);
 
 app.listen(apiPort, () => console.log(`Server up and running on port ${apiPort} !`));
