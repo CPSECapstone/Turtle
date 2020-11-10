@@ -18,6 +18,7 @@ import Register from '../pages/Register';
 import Login from '../pages/Login';
 import Home from '../pages/Home/Home';
 import PrivateRoute from '../components/private-route/PrivateRoute';
+import NewPage from '../components/NewPage/NewPage';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -33,8 +34,8 @@ if (localStorage.jwtToken) {
         // Logout user
         store.dispatch(logoutUser()); 
         
-        // Redirect to login
-        window.location.href = './login';
+        // Redirect to NewPage, was login
+        window.location.href = './';
     }
 }
 
@@ -46,14 +47,18 @@ function App () {
                     <NavBar />
 
                     <Switch>
-                        <Route
+                        <Route exact path='/' component={NewPage}/>
+                        <Route exact path='/login' component={Login} />
+                        <Route exact path='/register' component={Register} />
+                        <PrivateRoute exact path='/home' component={Home} />
+                        {/* <Route
                             exact
                             path='/'
                             component={() => <Redirect to='/login' />}
                         />
                         <Route exact path='/login' component={Login} />
                         <Route exact path='/register' component={Register} />
-                        <PrivateRoute exact path='/home' component={Home} />
+                        <PrivateRoute exact path='/home' component={Home} /> */}
                     </Switch>
                 </div>
             </Router>
