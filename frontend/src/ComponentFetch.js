@@ -43,9 +43,5 @@ export function getDevComponents() {
     }
   })
 
-  return (
-    <div>
-      <l>{elements}</l>
-    </div>
-  );
+  return elements;
 }
