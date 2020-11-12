@@ -4,15 +4,18 @@
             "id" : 1,
             "type" : "box",
             "color" : "red",
-            "height" : 200,
-            "width" : 350
+            "textColor" : "black",
+            "height" : "150px",
+            "width" : "200px"
         },
         {
             "id" : 2,
             "type" : "text",
-            "color" : "red",
-            "height" : 50,
-            "width" : 150
+            "color" : "blue",
+            "textColor" : "yellow",
+            "height" : "150px",
+            "width" : "200px",
+            "body" : "This is a text field body"
         }
     ]
 }

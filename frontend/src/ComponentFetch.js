@@ -1,29 +1,51 @@
-import React, {Component} from 'react'
+import React from 'react'
 import data from "./mockInputs/devComponents.json"
 
-class ComponentFetch extends Component {
-  constructor ()
-{
-  super();
-}
 
-render() {
-  const results = data.components.map((value) =>
-    <div>
-      <l><u>Component {value.id}</u></l>
-      <ul>type : {value.type}</ul>
-      <ul>color : {value.color}</ul>
-      <ul>height : {value.height}</ul>
-      <ul> width : {value.width}</ul>
-      <l>--------------------</l>
+function createBox(value) {
+  var boxStyle = {
+    backgroundColor: value.color,
+    height: value.height,
+    width: value.width,
+    color: value.textColor
+  };
+  return (
+    <div style={boxStyle}>
+      <h1 style={{color : "white"}}>{value.id}</h1>
     </div>
   )
-  return (
-      <div>
-          <ul>{results}</ul>
-      </div>
-    );
-  }
 }
 
-export default ComponentFetch;
+function createTextBox(value) {
+  var textBoxStyle = {
+    backgroundColor: value.color,
+    height: value.height,
+    width: value.width,
+    color: value.textColor
+  };
+  return (
+    <div style={textBoxStyle}>
+      <h1 style={{color : "white"}}>{value.id}</h1>
+      <nl style={textBoxStyle}>{value.body}</nl>
+    </div>
+  )
+}
+
+export function getDevComponents() {
+
+  const elements = data.components.map((value) => {
+    if (value.type === "text") {
+      return (
+        createTextBox(value)
+      )
+    } else if (value.type === "box") {
+      return createBox(value)
+    }
+  })
+
+  return (
+    <div>
+      <l>{elements}</l>
+    </div>
+  );
+}
