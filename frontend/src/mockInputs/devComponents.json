@@ -1,0 +1,21 @@
+{
+    "components" : [
+        {
+            "id" : 1,
+            "type" : "box",
+            "color" : "red",
+            "textColor" : "black",
+            "height" : "150px",
+            "width" : "200px"
+        },
+        {
+            "id" : 2,
+            "type" : "text",
+            "color" : "blue",
+            "textColor" : "yellow",
+            "height" : "150px",
+            "width" : "200px",
+            "body" : "This is a text field body"
+        }
+    ]
+}
