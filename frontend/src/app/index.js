@@ -50,7 +50,7 @@ function App () {
                         <Route
                             exact
                             path='/'
-                            component={() => <Redirect to='/newpage' />}
+                            component={() => <Redirect to='/login' />}
                         />
                         <Route exact path='/newpage' component={NewPage}/>
                         <Route exact path='/login' component={Login} />
