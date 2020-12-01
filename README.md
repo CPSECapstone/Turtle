@@ -1,5 +1,6 @@
 # Turtle
 
+
 ## Getting Started
 
 To run the front-end:
@@ -20,6 +21,10 @@ To run the back-end:
   
   
 Link: localhost:8000 to connect
+
+## CI
+
+https://app.circleci.com/pipelines/github/CPSECapstone
 
 
 ## Glossary
