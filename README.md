@@ -2,17 +2,25 @@
 
 ## Getting Started
 
-To run the front-end
-  cd frontend
-  npm install
-  npm start
+To run the front-end:
+
+* cd frontend
   
-To run the back-end
-  cd backend
-  npm install
-  npm start
+* npm install
   
-Goto localhost:8000
+* npm start
+  
+To run the back-end:
+
+* cd backend
+  
+* npm install
+  
+* npm start
+  
+  
+Link: localhost:8000 to connect
+
 
 ## Glossary
 
