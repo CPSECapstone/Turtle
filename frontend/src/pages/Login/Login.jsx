@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
-import { Button, InputLabel , Input , LoginContainer} from './Login.styled'
+import { Button, InputLabel , Input , LoginContainer, Wrapper, Label} from './Login.styled'
 
 class Login extends Component {
     constructor() {
@@ -49,45 +49,44 @@ class Login extends Component {
             <LoginContainer>
          
                 <div>
-                    <h4>
-                        <InputLabel>Sign In!</InputLabel>
-                    </h4>
+                    <Wrapper>
+                        <Label>Sign In!</Label>
+                    
 
-                    <form noValidate onSubmit={this.onSubmit}>
-                        <div>
-                            
-                            <InputLabel htmlFor="email">Email</InputLabel>
-                            <span className="red-text">
-                                {errors.email}
-                                {errors.emailnotfound}
-                            </span>
-                            <Input
-                                onChange={this.onChange}
-                                value={this.state.email}
-                                error={errors.email}
-                                id="email"
-                                type="email"
-                            />
-                        </div>
-                        <div>
-                            
-                            <InputLabel htmlFor="password">Password</InputLabel>
-                            <span className="red-text">
-                                {errors.password}
-                                {errors.passwordincorrect}
-                            </span>
-                            <Input
-                                onChange={this.onChange}
-                                value={this.state.password}
-                                error={errors.password}
-                                id="password"
-                                type="password"
-                            />
-                        </div>
-                        <div>
-                            <Button type="submit">Login</Button>
-                        </div>
-                    </form>
+                        <form noValidate onSubmit={this.onSubmit}>
+                            <div>
+                                <InputLabel htmlFor="email">Email</InputLabel>
+                                <span className="red-text">
+                                    {errors.email}
+                                    {errors.emailnotfound}
+                                </span>
+                                <Input
+                                    onChange={this.onChange}
+                                    value={this.state.email}
+                                    error={errors.email}
+                                    id="email"
+                                    type="email"
+                                />
+                            </div>
+                            <div>
+                                <InputLabel htmlFor="password">Password</InputLabel>
+                                <span className="red-text">
+                                    {errors.password}
+                                    {errors.passwordincorrect}
+                                </span>
+                                <Input
+                                    onChange={this.onChange}
+                                    value={this.state.password}
+                                    error={errors.password}
+                                    id="password"
+                                    type="password"
+                                />
+                            </div>
+                            <div>
+                                <Button type="submit">Login</Button>
+                            </div>
+                        </form>
+                    </Wrapper>
                 </div>
             </LoginContainer>
         );
