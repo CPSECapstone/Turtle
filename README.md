@@ -1,5 +1,32 @@
 # Turtle
 
+
+## Getting Started
+
+To run the front-end:
+
+* cd frontend
+  
+* npm install
+  
+* npm start
+  
+To run the back-end:
+
+* cd backend
+  
+* npm install
+  
+* npm start
+  
+  
+Link: localhost:8000 to connect
+
+## CI
+
+https://app.circleci.com/pipelines/github/CPSECapstone
+
+
 ## Glossary
 
 **UserInterface-as-a-Service** Date and UI compenents that can be effortlessly inserted into any apllications UI
