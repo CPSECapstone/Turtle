@@ -50,7 +50,7 @@ class Login extends Component {
          
                 <div>
                     <Wrapper>
-                        <Label>Sign In!</Label>
+                        <Label>Sign In</Label>
                     
 
                         <form noValidate onSubmit={this.onSubmit}>

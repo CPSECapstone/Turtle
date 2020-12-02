@@ -5,18 +5,22 @@ import gray from '../../images/gray.jpg';
 export const Button = styled.button`
   /* This renders the buttons above... Edit me! */
   display: inline-block;
+  font-family: 'Trebuchet MS', sans-serif;
   border-radius: 3px;
-  padding: 0.5rem 0;
-  margin: 1rem 1rem;
-  width: 11rem;
+  padding: 8px;
+  margin: 10px 55px;
+  width: 150px;
   color: black;
   border: 2px solid white;
+  :hover {
+      cursor: pointer;
+  }
 `;
 
 export const InputLabel = styled.label`
   position: absolute;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;  
   background-color: transparent;
   display: inline-block;
   clear: left;
@@ -46,29 +50,37 @@ export const Input = styled.input`
  
 `;
 
+export const Label = styled.label`
+ position: absolute;
+ top: 2%;
+ left: 34%;    
+ margin: 0 0 30px;
+ font-family: 'Trebuchet MS', sans-serif;
+ color: white;
+ text-align: center;
+ font-size: 30px;
+ font-weight: bold;
+`;
+
+
+
+export const Wrapper = styled.body`
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  width: 350px;
+  height: 300px;
+  padding: 40px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 15px 25px rgba(0,0,0,1);
+  border-radius: 20px;
+`;
+
 export const LoginContainer = styled.div`
   background-image: url(${gray});
   height: 100vh;
   background-position: center;
   background-size: cover;
 `;
-
-export const Wrapper = styled.body`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  box-sizing: border-box;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 15px 25px rgba(0,0,0,.5);
-  border-radius: 10px;
-`;
-
-export const Label = styled.label`
- margin: 0 0 30px;
- padding: 0;
- color: white;
- text-align: center;
-`;
-
