@@ -19,7 +19,7 @@ import Login from '../pages/Login/Login';
 import Home from '../pages/Home/Home';
 import PrivateRoute from '../components/private-route/PrivateRoute';
 import NewPage from '../components/NewPage/NewPage';
-import gray from '../images/gray.jpg';
+
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -44,8 +44,7 @@ function App () {
     return ( 
         <Provider store={store}>
             <Router>
-                <div styles={{backgroundImage: `url(${gray})`}}>
-                  
+                <div>
                     <div>
                         <NavBar />
 

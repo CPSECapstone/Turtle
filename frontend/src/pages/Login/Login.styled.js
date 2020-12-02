@@ -2,9 +2,6 @@ import styled from 'styled-components'
 import gray from '../../images/gray.jpg';
 
 
-
-
-
 export const Button = styled.button`
   /* This renders the buttons above... Edit me! */
   display: inline-block;

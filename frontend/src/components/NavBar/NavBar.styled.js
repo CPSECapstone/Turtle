@@ -7,8 +7,9 @@ export const MainNav = styled.a`
   display: flex;
   flex-flow: row nowrap;
   -webkit-font-smoothing: antialiased;
-  height: 50px;
+  height: 60px;
   padding: 0 30px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 `;
 
 export const NavLogo = styled.a`
@@ -25,36 +26,32 @@ export const NavLogo = styled.a`
     }
   `;
   
-  export const NavLink = styled.a.attrs({
-    href: "/register",
-    onClick: evt => {
-      evt.preventDefault();
-    }
-  })`
-    text-decoration: none;
-    /* align-items: center;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    flex-flow: row nowrap;
-    height: 100%;
-    padding: 0 10px;
-    text-decoration: none; */
-    color: white;
-    :hover {
-      color: green;
-    }
-  `;
-  
   export const StyledLinked = styled(Link)`
-    display: flex;
-    align-items: center;
+    font-family: 'Trebuchet MS', sans-serif;
     color: white;
     text-decoration: none;
     height: 100%;
-    flex-flow: row nowrap;
-    padding: 0 10px;
+    padding: 0px 20px;
+    
     :hover {
       color: black;
+      transition: all 0.3s ease;
     }
   `;
+
+  export const Header = styled.h2`
+    text-align: center;
+    color: black;
+    font-family: 'Trebuchet MS', sans-serif;
+    :hover {
+        cursor: pointer;
+    }
+`;
+
+export const NavItemLocation = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: auto;
+    justify-content: space-between;
+`;

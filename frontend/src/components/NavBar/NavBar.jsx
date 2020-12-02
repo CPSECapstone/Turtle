@@ -3,8 +3,9 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import { MainNav, NavLogo, NavLink, StyledLinked} from "./NavBar.styled";
+import { MainNav, NavLogo, StyledLinked, Header, NavItemLocation} from "./NavBar.styled";
 import logo from '../../images/real.png';
+
 class NavBar extends Component {
     render() {
         const { auth, logoutUser } = this.props;
@@ -14,25 +15,22 @@ class NavBar extends Component {
             <NavLogo>
                 <img src={logo}/>
             </NavLogo>
-                <>
-                    {auth.isAuthenticated ? (
-                        <>
-                            <button onClick={logoutUser}>Sign out</button>
-                            <p key={3}>{`Logged in as: You`}</p>
-                        </>
-                    ) : (
-                        <>
-                            <StyledLinked to="login">
-                                Login
-                            </StyledLinked>
-                            <StyledLinked to="register">
-                                Register
-                            </StyledLinked>
-                            
-                            
-                        </>
-                    )}
-                </>
+            <Header>Cloud Haven</Header>
+               <NavItemLocation>
+                    <>
+                        {auth.isAuthenticated ? (
+                            <>
+                                <button onClick={logoutUser}>Sign out</button>
+                                <p key={3}>{`Logged in as: You`}</p>
+                            </>
+                        ) : (
+                            <>
+                                <StyledLinked to="login">Login</StyledLinked>
+                                <StyledLinked to="register">Register </StyledLinked>
+                            </>
+                        )}
+                    </>
+                </NavItemLocation>
             </MainNav>
         );
     }
