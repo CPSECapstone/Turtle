@@ -22,27 +22,4 @@ def delete_in_db (colleciton, query) :
 def delete_all_in_db (collection) :
     collection.delete_many({})
 
-query = {
-    "name": "Rohan"
-};
-
-
-def main () :
-
-    collection = connect();
-    i = 0;
-    while (i < 50) :
-        post = {
-            "name": "user" + str(i),
-            "email": "user" + str(i) + "@gmail.com",
-            "password": "$2a$10$L8IG0Nsow2OOKgRdBJMDSe.DPadRpYODvm7VvYfIiEgVU1mmugFA6",
-            "date": "2020-12-02T06:07:53.289+00:00",
-            "__v": str(i)
-        };
-        write_to_db(collection, post);
-        i += 1;
-
-    delete_all_in_db(collection);
-    
-main();
 
