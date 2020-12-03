@@ -2,7 +2,7 @@
 
 ## Glossary
 
-**UserInterface-as-a-Service** Date and UI compenents that can be effortlessly inserted into any apllications UI
+**UserInterface-as-a-Service** Date and UI components that can be effortlessly inserted into any apllications UI
   
  **Tokenization** The process of turning sensitive pieces of data into a non-sensitive random string of characters that has no value if breached.
  

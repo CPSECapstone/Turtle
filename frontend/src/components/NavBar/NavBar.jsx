@@ -3,25 +3,35 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import { MainNav, NavLogo, StyledLinked, Header, NavItemLocation} from "./NavBar.styled";
+import logo from '../../images/real.png';
 
 class NavBar extends Component {
     render() {
         const { auth, logoutUser } = this.props;
 
         return (
-            <>
-                {auth.isAuthenticated ? (
+            <MainNav>
+            <NavLogo>
+                <img src={logo}/>
+            </NavLogo>
+            <Header>Cloud Haven</Header>
+               <NavItemLocation>
                     <>
-                        <button onClick={logoutUser}>Sign out</button>
-                        <p key={3}>{`Logged in as: You`}</p>
+                        {auth.isAuthenticated ? (
+                            <>
+                                <button onClick={logoutUser}>Sign out</button>
+                                <p key={3}>{`Logged in as: You`}</p>
+                            </>
+                        ) : (
+                            <>
+                                <StyledLinked to="login">Login</StyledLinked>
+                                <StyledLinked to="register">Register </StyledLinked>
+                            </>
+                        )}
                     </>
-                ) : (
-                    <>
-                        <Link to="/login">Login</Link>
-                        <Link to="/register">Register</Link>
-                    </>
-                )}
-            </>
+                </NavItemLocation>
+            </MainNav>
         );
     }
 }
