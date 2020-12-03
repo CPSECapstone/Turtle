@@ -1,6 +1,32 @@
 import styled from 'styled-components'
 import gray from '../../images/gray.jpg';
 
+export const MainHeader = styled.h1`
+  position: absolute;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-align: center;
+  left: 27%;
+  color: white;
+  top: 1%;
+`;
+
+
+export const TextWrapper = styled.body`
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 900px;
+  height: 600px;
+  padding: 40px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 15px;
+  color: #FFFFE0;
+  border-radius: 20px;
+
+`;
+
 
 export const Button = styled.button`
   /* This renders the buttons above... Edit me! */
@@ -55,7 +81,7 @@ export const Label = styled.label`
 
 
 
-export const Wrapper = styled.body`
+export const LoginWrapper = styled.body`
   position: absolute;
   top: 50%;
   left: 80%;

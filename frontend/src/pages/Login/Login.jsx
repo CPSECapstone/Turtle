@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
-import { Button, Input , LoginContainer, Wrapper, Label} from './Login.styled'
+import { Button, Input , LoginContainer, LoginWrapper, Label, TextWrapper, MainHeader} from './Login.styled'
 
 class Login extends Component {
     constructor() {
@@ -47,11 +47,13 @@ class Login extends Component {
 
         return (
             <LoginContainer>
-         
                 <div>
-                    <Wrapper>
+                    <TextWrapper>
+                        <MainHeader>Welcome to Cloud Haven!</MainHeader>
+                    </TextWrapper>
+                    
+                    <LoginWrapper>
                         <Label>Sign In</Label>
-
                         <form noValidate onSubmit={this.onSubmit}>
                             <div>
                                 <span className="red-text">
@@ -83,7 +85,7 @@ class Login extends Component {
                                 <Button type="submit">Login</Button>
                             </div>
                         </form>
-                    </Wrapper>
+                    </LoginWrapper>
                 </div>
             </LoginContainer>
         );
