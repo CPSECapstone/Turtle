@@ -57,10 +57,10 @@ export const Label = styled.label`
 
 export const Wrapper = styled.body`
   position: absolute;
-  top: 50%;
-  left: 80%;
+  top: 40%;
+  left: 50%;
   width: 350px;
-  height: 270px;
+  height: 400px;
   padding: 40px;
   padding-top: 50px;
   box-sizing: border-box;

@@ -14,7 +14,7 @@ import { Provider } from 'react-redux';
 import store from '../store';
 
 import NavBar from '../components/NavBar/NavBar';
-import Register from '../pages/Register';
+import Register from '../pages/Register/Register';
 import Login from '../pages/Login/Login';
 import Home from '../pages/Home/Home';
 import PrivateRoute from '../components/private-route/PrivateRoute';
