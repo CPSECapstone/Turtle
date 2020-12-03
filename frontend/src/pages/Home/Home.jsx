@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 
-export default class Home extends Component {
+export default class EmptyPage extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
+
         return (
             <div>
-                Welcome Home
+                <h3>Hello</h3>
             </div>
         )
     }
