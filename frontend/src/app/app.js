@@ -16,8 +16,8 @@ import store from '../store';
 import NavBar from '../components/NavBar/NavBar';
 import Register from '../pages/Register/Register';
 import Login from '../pages/Login/Login';
+import LandingPage from '../pages/LandingPage/LandingPage';
 import Home from '../pages/Home/Home';
-import AppPage from '../pages/AppPage/AppPage';
 import PrivateRoute from '../components/private-route/PrivateRoute';
 import { Container } from './app.styled';
 
@@ -51,13 +51,16 @@ function App () {
                         <Route
                             exact
                             path='/'
-                            component={() => <Redirect to='/login' />}
+                            component={() => <Redirect to='/landing-page' />}
+                        />
+                        <Route
+                            exact
+                            path='/landing-page'
+                            component={LandingPage}
                         />
                         <Route exact path='/login' component={Login} />
                         <Route exact path='/register' component={Register} />
                         <PrivateRoute exact path='/home' component={Home} />
-                        <PrivateRoute exact path='/app-page' component={AppPage}
-                        />
                     </Switch>
                 </Container>
             </Router>

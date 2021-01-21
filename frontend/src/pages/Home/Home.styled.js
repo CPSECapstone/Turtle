@@ -1,32 +1,24 @@
 import styled from 'styled-components';
 import { palette } from '../../styles/palette';
-import { BasicButton } from '../../styles/Button';
 
-export const Button = styled(BasicButton)``;
+//Container, TitleRow, Title, LineBreak, Apps
 
-export const Background = styled.div`
+export const Container = styled.div`
+    margin: 0 32px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
 `;
 
 export const Title = styled.h1`
-    font-size: 64px;
-    margin-top: 264px;
-    color: ${palette.WHITE_TEAL};
+    color: ${palette.LIGHT_ORANGE};
+    font-size: 32px;
+    font-weight: 700;
 `;
 
-export const SubText = styled.p`
-    font-size: 18px;
-    color: ${palette.WHITE_TEAL};
-    font-weight: 600;
-    margin: 100px 0 64px;
+export const LineBreak = styled.div`
+    border: 1px solid ${palette.LIGHT_ORANGE};
+    margin: 64px 0;
 `;
 
-export const ButtonRow = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 32px;
-`;
+export const Apps = styled.div``;

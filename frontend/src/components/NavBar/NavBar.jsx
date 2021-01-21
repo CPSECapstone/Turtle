@@ -3,7 +3,13 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import { Container, UserRow, Name, Button } from "./NavBar.styled";
+import {
+    Container,
+    UserRow,
+    Name,
+    Button,
+    LoginContainer,
+} from "./NavBar.styled";
 
 class NavBar extends Component {
     render() {
@@ -16,13 +22,12 @@ class NavBar extends Component {
         }
 
         return (
-            <Container
-                singleItem={
-                    !auth.isAuthenticated || location.pathname == "/home"
-                }
-            >
-                {auth.isAuthenticated && location.pathname !== "/home" ? (
-                    <Button filled to="/home">
+            <Container singleItem={location.pathname == "/home"}>
+                {location.pathname !== "/home" ? (
+                    <Button
+                        filled
+                        to={auth.isAuthenticated ? "/home" : "/landing-page"}
+                    >
                         Home
                     </Button>
                 ) : (
@@ -35,7 +40,7 @@ class NavBar extends Component {
                         <Button onClick={logoutUser}>Sign out</Button>
                     </UserRow>
                 ) : (
-                    <>
+                    <LoginContainer>
                         {location.pathname !== "/login" ? (
                             <Button to="/login">Login</Button>
                         ) : (
@@ -46,7 +51,7 @@ class NavBar extends Component {
                         ) : (
                             ""
                         )}
-                    </>
+                    </LoginContainer>
                 )}
             </Container>
         );
