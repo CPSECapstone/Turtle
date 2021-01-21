@@ -11,7 +11,7 @@ export default class LandingPage extends Component {
                     <Button filled={false} to="/info">
                         How it Works
                     </Button>
-                    <Button filled to="/app-page">
+                    <Button filled to="/login">
                         Get Started
                     </Button>
                 </ButtonRow>
