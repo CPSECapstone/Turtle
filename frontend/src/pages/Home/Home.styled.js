@@ -17,7 +17,7 @@ export const Title = styled.h1`
 
 export const SubText = styled.p`
     font-size: 18px;
-    color: ${palette.DARK_CHARCOAL};
+    color: ${palette.WHITE_TEAL};
     font-weight: 600;
 `;
 
@@ -31,7 +31,7 @@ export const ButtonRow = styled.div`
 export const Button = styled(Link)`
     font-size: 18px;
     font-weight: 600;
-    border: 1px solid ${palette.LIGHT_ORANGE};
+    border: 2px solid ${palette.LIGHT_ORANGE};
     border-radius: 4px;
     background-color: ${(props) => (props.filled ? palette.LIGHT_ORANGE : 'unset')};
     color: ${(props) => (props.filled ? palette.WHITE : palette.LIGHT_ORANGE)};

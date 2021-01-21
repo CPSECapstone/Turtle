@@ -8,7 +8,7 @@ export default class Home extends Component {
                 <Title>Welcome Home</Title>
                 <SubText>It's CLOUDHAVEN BIIIATCH!</SubText>
                 <ButtonRow>
-                    <Button filled={false} to="/more-info">
+                    <Button filled={false} to="/info">
                         How it Works
                     </Button>
                     <Button filled to="/app-page">
