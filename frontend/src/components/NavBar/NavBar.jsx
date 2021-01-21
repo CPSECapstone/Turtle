@@ -3,13 +3,14 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import { Container } from './NavBar.styled';
 
 class NavBar extends Component {
     render() {
         const { auth, logoutUser } = this.props;
 
         return (
-            <>
+            <Container>
                 {auth.isAuthenticated ? (
                     <>
                         <button onClick={logoutUser}>Sign out</button>
@@ -21,7 +22,7 @@ class NavBar extends Component {
                         <Link to="/register">Register</Link>
                     </>
                 )}
-            </>
+            </Container>
         );
     }
 }

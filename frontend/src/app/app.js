@@ -14,10 +14,11 @@ import { Provider } from 'react-redux';
 import store from '../store';
 
 import NavBar from '../components/NavBar/NavBar';
-import Register from '../pages/Register';
-import Login from '../pages/Login';
+import Register from '../pages/Register/Register';
+import Login from '../pages/Login/Login';
 import Home from '../pages/Home/Home';
 import PrivateRoute from '../components/private-route/PrivateRoute';
+import { Container } from './app.styled';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -31,8 +32,8 @@ if (localStorage.jwtToken) {
     const currentTime = Date.now() / 1000; // to get in milliseconds
     if (decoded.exp < currentTime) {
         // Logout user
-        store.dispatch(logoutUser()); 
-        
+        store.dispatch(logoutUser());
+
         // Redirect to login
         window.location.href = './login';
     }
@@ -42,7 +43,7 @@ function App () {
     return (
         <Provider store={store}>
             <Router>
-                <div>
+                <Container>
                     <NavBar />
 
                     <Switch>
@@ -55,7 +56,7 @@ function App () {
                         <Route exact path='/register' component={Register} />
                         <PrivateRoute exact path='/home' component={Home} />
                     </Switch>
-                </div>
+                </Container>
             </Router>
         </Provider>
     );
