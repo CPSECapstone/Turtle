@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ChatFriend from "../ChatFriend/ChatFriend";
+import ChatBubble from "../ChatBubble/ChatBubble";
 import {
     Container,
     Background,
@@ -32,6 +33,7 @@ export default class ChatWindow extends Component {
                         </SearchRow>
                         <FriendList>
                             <ScrollList>
+                                {/* TODO: Cleanup */}
                                 <ChatFriend />
                                 <ChatFriend />
                                 <ChatFriend />
@@ -58,7 +60,26 @@ export default class ChatWindow extends Component {
                             <CloseIcon></CloseIcon>
                         </TopRow>
                         <Body>
-                            <Text>{/* {List of text messages} */}</Text>
+                            <Text>
+                                {/* TODO: Cleanup */}
+                                <ChatBubble isUser/>
+                                <ChatBubble/>
+                                <ChatBubble/>
+                                <ChatBubble/>
+                                <ChatBubble/>
+                                <ChatBubble isUser/>
+                                <ChatBubble isUser/>
+                                <ChatBubble/>
+                                <ChatBubble isUser/>
+                                <ChatBubble/>
+                                <ChatBubble/>  
+                                <ChatBubble isUser/>  
+                                <ChatBubble isUser/>
+                                <ChatBubble isUser/>
+                                <ChatBubble isUser/>
+                                <ChatBubble isUser/>
+                                <ChatBubble isUser/>
+                            </Text>
                         </Body>
                         <ChatRow>
                             <AttachmentIcon />
