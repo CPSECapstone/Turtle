@@ -18,6 +18,7 @@ import Register from '../pages/Register/Register';
 import Login from '../pages/Login/Login';
 import LandingPage from '../pages/LandingPage/LandingPage';
 import Home from '../pages/Home/Home';
+import Chat from '../pages/Chat/Chat';
 import PrivateRoute from '../components/private-route/PrivateRoute';
 import { Container } from './app.styled';
 
@@ -61,6 +62,7 @@ function App () {
                         <Route exact path='/login' component={Login} />
                         <Route exact path='/register' component={Register} />
                         <PrivateRoute exact path='/home' component={Home} />
+                        <PrivateRoute exact path='/chat' component={Chat} />
                     </Switch>
                 </Container>
             </Router>

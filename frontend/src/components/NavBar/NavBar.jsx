@@ -22,7 +22,7 @@ class NavBar extends Component {
         }
 
         return (
-            <Container singleItem={location.pathname == "/home"}>
+            <Container singleItem={location.pathname === "/home"}>
                 {location.pathname !== "/home" ? (
                     <Button
                         filled
