@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ChatFriend from "../ChatFriend/ChatFriend";
 import {
     Container,
     Background,
@@ -31,10 +32,17 @@ export default class ChatWindow extends Component {
                         </SearchRow>
                         <FriendList>
                             <ScrollList>
-                                <div>Example</div>
-                                <div>
-                                    This is where the user friends will go
-                                </div>
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
+                                <ChatFriend />
                             </ScrollList>
                         </FriendList>
                         <ButtonContainer>
