@@ -1,21 +1,15 @@
 import React, { Component } from "react";
-import { Background, Title, SubText, ButtonRow, Button } from "./Home.styled";
+import { Container, Title, LineBreak, Apps } from "./Home.styled";
+import AppList from "../../components/AppList/AppList";
 
 export default class Home extends Component {
     render() {
         return (
-            <Background>
-                <Title>Welcome Home</Title>
-                <SubText>It's CLOUDHAVEN BIIIATCH!</SubText>
-                <ButtonRow>
-                    <Button filled={false} to="/info">
-                        How it Works
-                    </Button>
-                    <Button filled to="/app-page">
-                        Get Started
-                    </Button>
-                </ButtonRow>
-            </Background>
+            <Container>
+                <Title>Apps</Title>
+                <LineBreak />
+                <Apps children={<AppList />} />
+            </Container>
         );
     }
 }

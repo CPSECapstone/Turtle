@@ -23,3 +23,7 @@ export const Name = styled.p`
     font-size: 16px;
     color: ${palette.WHITE_TEAL};
 `;
+
+export const LoginContainer = styled.div`
+    padding-top: 16px;
+`;
