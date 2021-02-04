@@ -12,7 +12,7 @@ import { setCurrentUser, logoutUser } from '../actions/authActions';
 
 import { Provider } from 'react-redux';
 import store from '../store';
-
+import AppPage from '../pages/AppPage/AppPage';
 import NavBar from '../components/NavBar/NavBar';
 import Register from '../pages/Register/Register';
 import Login from '../pages/Login/Login';
@@ -63,6 +63,11 @@ function App () {
                         <Route exact path='/register' component={Register} />
                         <PrivateRoute exact path='/home' component={Home} />
                         <PrivateRoute exact path='/chat' component={Chat} />
+                        <PrivateRoute
+                            exact
+                            path='/app-page'
+                            component={AppPage}
+                        />
                     </Switch>
                 </Container>
             </Router>
