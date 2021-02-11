@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const CalendarEvent = "CalendarEvent.js";
 
 const CalendarSchema = new Schema({
   events: {
