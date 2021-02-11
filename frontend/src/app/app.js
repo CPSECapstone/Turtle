@@ -12,12 +12,15 @@ import { setCurrentUser, logoutUser } from '../actions/authActions';
 
 import { Provider } from 'react-redux';
 import store from '../store';
-
+import AppPage from '../pages/AppPage/AppPage';
 import NavBar from '../components/NavBar/NavBar';
-import Register from '../pages/Register';
-import Login from '../pages/Login';
+import Register from '../pages/Register/Register';
+import Login from '../pages/Login/Login';
+import LandingPage from '../pages/LandingPage/LandingPage';
 import Home from '../pages/Home/Home';
+import Chat from '../pages/Chat/Chat';
 import PrivateRoute from '../components/private-route/PrivateRoute';
+import { Container } from './app.styled';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -31,8 +34,8 @@ if (localStorage.jwtToken) {
     const currentTime = Date.now() / 1000; // to get in milliseconds
     if (decoded.exp < currentTime) {
         // Logout user
-        store.dispatch(logoutUser()); 
-        
+        store.dispatch(logoutUser());
+
         // Redirect to login
         window.location.href = './login';
     }
@@ -42,20 +45,31 @@ function App () {
     return (
         <Provider store={store}>
             <Router>
-                <div>
+                <Container>
                     <NavBar />
 
                     <Switch>
                         <Route
                             exact
                             path='/'
-                            component={() => <Redirect to='/login' />}
+                            component={() => <Redirect to='/landing-page' />}
+                        />
+                        <Route
+                            exact
+                            path='/landing-page'
+                            component={LandingPage}
                         />
                         <Route exact path='/login' component={Login} />
                         <Route exact path='/register' component={Register} />
                         <PrivateRoute exact path='/home' component={Home} />
+                        <PrivateRoute exact path='/chat' component={Chat} />
+                        <PrivateRoute
+                            exact
+                            path='/app-page'
+                            component={AppPage}
+                        />
                     </Switch>
-                </div>
+                </Container>
             </Router>
         </Provider>
     );

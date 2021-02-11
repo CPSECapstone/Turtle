@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Container, Title, LineBreak, Apps } from "./Home.styled";
+import { Container, Title, LineBreak, Apps } from "./AppPage.styled";
 import AppList from "../../components/AppList/AppList";
 
-export default class Home extends Component {
+export default class AppPage extends Component {
     render() {
         return (
             <Container>

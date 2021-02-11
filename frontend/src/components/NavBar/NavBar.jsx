@@ -1,27 +1,59 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import {
+    Container,
+    UserRow,
+    Name,
+    Button,
+    LoginContainer,
+} from "./NavBar.styled";
 
 class NavBar extends Component {
     render() {
-        const { auth, logoutUser } = this.props;
+        const { auth, logoutUser, location } = this.props;
+        let userName;
+
+        if (auth.isAuthenticated) {
+            userName =
+                auth.user.name[0].toUpperCase() + auth.user.name.slice(1);
+        }
 
         return (
-            <>
-                {auth.isAuthenticated ? (
-                    <>
-                        <button onClick={logoutUser}>Sign out</button>
-                        <p key={3}>{`Logged in as: You`}</p>
-                    </>
+            <Container singleItem={location.pathname === "/home"}>
+                {location.pathname !== "/home" ? (
+                    <Button
+                        filled
+                        to={auth.isAuthenticated ? "/home" : "/landing-page"}
+                    >
+                        Home
+                    </Button>
                 ) : (
-                    <>
-                        <Link to="/login">Login</Link>
-                        <Link to="/register">Register</Link>
-                    </>
+                    ""
                 )}
-            </>
+
+                {auth.isAuthenticated ? (
+                    <UserRow>
+                        <Name key={3}>{`Logged in as: ${userName}`}</Name>
+                        <Button onClick={logoutUser}>Sign out</Button>
+                    </UserRow>
+                ) : (
+                    <LoginContainer>
+                        {location.pathname !== "/login" ? (
+                            <Button to="/login">Login</Button>
+                        ) : (
+                            ""
+                        )}
+                        {location.pathname !== "/register" ? (
+                            <Button to="/register">Register</Button>
+                        ) : (
+                            ""
+                        )}
+                    </LoginContainer>
+                )}
+            </Container>
         );
     }
 }
