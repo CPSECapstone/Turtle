@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import './calendar.css';
+import { calendar, calendarcontainer, calendarheader } from './calendar-style'
 
 export default class Calendar extends React.Component {
     state = {
@@ -19,6 +20,7 @@ export default class Calendar extends React.Component {
     }
 
 
+    
     weekdays = moment.weekdays(); //["Sunday", "Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday"]
     weekdaysShort = moment.weekdaysShort(); // ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     months = moment.months();
@@ -33,7 +35,6 @@ export default class Calendar extends React.Component {
         return this.state.dateContext.daysInMonth();
     }
     currentDate = () => {
-        console.log("currentDate: ", this.state.dateContext.get("date"));
         return this.state.dateContext.get("date");
     }
     currentDay = () => {
@@ -78,6 +79,7 @@ export default class Calendar extends React.Component {
         this.props.onMonthChange && this.props.onMonthChange();
 
     }
+     
     SelectList = (props) => {
         let popup = props.data.map((data) => {
             return (
@@ -165,7 +167,6 @@ export default class Calendar extends React.Component {
         this.setState({
             selectedDay: day
         }, () => {
-            console.log("SELECTED DAY: ", this.state.selectedDay);
         });
 
         this.props.onDayClick && this.props.onDayClick(e, day);
@@ -187,7 +188,6 @@ export default class Calendar extends React.Component {
             );
         }
 
-        console.log("blanks: ", blanks);
 
         let daysInMonth = [];
         for (let d = 1; d <= this.daysInMonth(); d++) {
@@ -200,8 +200,6 @@ export default class Calendar extends React.Component {
             );
         }
 
-
-        console.log("days: ", daysInMonth);
 
         var totalSlots = [...blanks, ...daysInMonth];
         let rows = [];
@@ -231,10 +229,12 @@ export default class Calendar extends React.Component {
         })
 
         return (
-            <div className="calendar-container" style={this.style}>
-                <table className="calendar">
+            // <div className="calendar-container" style={this.style}>
+            <calendarcontainer>
+                <calendar>
+                {/* <table className="calendar"> */}
                     <thead>
-                        <tr className="calendar-header">
+                        <calendarheader>
                             <td colSpan="5">
                                 <this.MonthNav />
                                 {" "}
@@ -249,7 +249,7 @@ export default class Calendar extends React.Component {
                                 </i>
 
                             </td>
-                        </tr>
+                        </calendarheader>
                     </thead>
                     <tbody>
                         <tr>
@@ -257,9 +257,10 @@ export default class Calendar extends React.Component {
                         </tr>
                         {trElems}
                     </tbody>
-                </table>
-
-            </div>
+                {/* </table> */}
+                </calendar>
+            </calendarcontainer>
+            // {/* </div> */}
 
         );
     }
