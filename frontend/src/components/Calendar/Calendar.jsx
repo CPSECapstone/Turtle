@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import styled, { css } from 'styled-components';
 import {
     Frame,
     Header,
@@ -8,8 +7,6 @@ import {
     Body,
     Day
 } from "./Calendar.styled"
-
-
 
 export function Calendar() {
   const DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -39,15 +36,6 @@ export function Calendar() {
     setYear(date.getFullYear());
     setStartDay(getStartDayOfMonth(date));
   }, [date]);
-
-//   function getStartDayOfMonth(date) {
-//     return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-//   }
-
-    
-//   function isLeapYear(year) {
-//     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-//   }
 
   const days = isLeapYear(date.getFullYear()) ? DAYS_LEAP : DAYS;
 

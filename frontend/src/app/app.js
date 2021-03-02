@@ -14,7 +14,6 @@ import { Provider } from 'react-redux';
 import store from '../store';
 import AppPage from '../pages/AppPage/AppPage';
 import NavBar from '../components/NavBar/NavBar';
-// import Calendar from '../components/Calendar/Calendar';
 import {Calendar} from '../components/Calendar/Calendar'
 import Register from '../pages/Register/Register';
 import Login from '../pages/Login/Login';
