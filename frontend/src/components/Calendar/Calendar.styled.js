@@ -18,7 +18,6 @@ export const Header = styled.div`
 
 export const Button = styled.div`
   cursor: pointer;
-  
 `;
 
 export const Body = styled.div`
@@ -34,16 +33,6 @@ export const Day = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
-  ${props =>
-    props.isToday &&
-    css`
-      border: 1px solid white;
-    `}
-
-  ${props =>
-    props.isSelected &&
-    css`
-      background-color: black;
-    `}
+  border: ${props => props.isToday ? '1px solid white' : 'white'};
+  background-color: ${props => props.isSelected ? 'black' : ''}
 `;
