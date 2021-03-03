@@ -34,6 +34,7 @@ export const TitleContainer = styled.div`
 export const Title = styled.p`
     font-size: 18px;
     height: 24px;
+    padding: 18px 0px;
 `;
 
 export const Corner = styled.div`
