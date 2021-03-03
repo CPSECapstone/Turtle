@@ -22,13 +22,10 @@ class NavBar extends Component {
         }
 
         return (
-            <Container singleItem={location.pathname === "/home"}>
-                {location.pathname !== "/home" ? (
-                    <Button
-                        filled
-                        to={auth.isAuthenticated ? "/home" : "/landing-page"}
-                    >
-                        Home
+            <Container singleItem={location.pathname == "/landing-page"}>
+                {location.pathname !== "/landing-page" ? (
+                    <Button filled to="/landing-page">
+                        Back
                     </Button>
                 ) : (
                     ""
