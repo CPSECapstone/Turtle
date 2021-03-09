@@ -61,4 +61,4 @@ https://app.circleci.com/pipelines/github/CPSECapstone
         text : the actual text to be displayed
     }
     
-    To install the react icons run npm install react-icons --save
+   
