@@ -8,6 +8,8 @@ To run the front-end:
 * cd frontend
   
 * npm install
+
+* npm install react-icons --save
   
 * npm start
   
@@ -60,5 +62,3 @@ https://app.circleci.com/pipelines/github/CPSECapstone
         font_size : size of the text
         text : the actual text to be displayed
     }
-    
-   
