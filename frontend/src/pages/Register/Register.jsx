@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
-import { Button, Input , LoginContainer, Wrapper, Label} from './Register.styled'
-import Login from "../Login/Login";
 
 class Register extends Component {
     constructor() {
@@ -47,61 +45,60 @@ class Register extends Component {
         const { errors } = this.state;
 
         return (
-            <LoginContainer>
-
-            
-                <div>
-                    <Wrapper>
-                        <Label>Register</Label>
-                        <form noValidate onSubmit={this.onSubmit}>
-                            <div>
-                                <Input placeholder="Full Name"
-                                    onChange={this.onChange}
-                                    value={this.state.name}
-                                    error={errors.name}
-                                    id="name"
-                                    type="text"
-                                />
-                                
-                                <span className="red-text">{errors.name}</span>
-                            </div>
-                            <div>
-                                <Input placeholder="Email"
-                                    onChange={this.onChange}
-                                    value={this.state.email}
-                                    error={errors.email}
-                                    id="email"
-                                    type="email"
-                                />
-                                <span className="red-text">{errors.email}</span>
-                            </div>
-                            <div>
-                                <Input placeholder="Password"
-                                    onChange={this.onChange}
-                                    value={this.state.password}
-                                    error={errors.password}
-                                    id="password"
-                                    type="password"
-                                />
-                                <span className="red-text">{errors.password}</span>
-                            </div>
-                            <div>
-                                <Input placeholder="Confirm Password"
-                                    onChange={this.onChange}
-                                    value={this.state.password2}
-                                    error={errors.password2}
-                                    id="password2"
-                                    type="password"
-                                />
-                                <span className="red-text">{errors.password2}</span>
-                            </div>
-                            <div>
-                                <Button type="submit">Sign up</Button>
-                            </div>
-                        </form>
-                    </Wrapper>
-                </div>
-            </LoginContainer>
+            <div>
+                <h4>
+                    <b>Register</b> below
+                </h4>
+                <form noValidate onSubmit={this.onSubmit}>
+                    <div>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.name}
+                            error={errors.name}
+                            id="name"
+                            type="text"
+                        />
+                        <label htmlFor="name">Name</label>
+                        <span className="red-text">{errors.name}</span>
+                    </div>
+                    <div>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.email}
+                            error={errors.email}
+                            id="email"
+                            type="email"
+                        />
+                        <label htmlFor="email">Email</label>
+                        <span className="red-text">{errors.email}</span>
+                    </div>
+                    <div>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.password}
+                            error={errors.password}
+                            id="password"
+                            type="password"
+                        />
+                        <label htmlFor="password">Password</label>
+                        <span className="red-text">{errors.password}</span>
+                    </div>
+                    <div>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.password2}
+                            error={errors.password2}
+                            id="password2"
+                            type="password"
+                        />
+                        <label htmlFor="password2">Confirm Password</label>
+                        <span className="red-text">{errors.password2}</span>
+                    </div>
+                    <div>
+                        <button type="submit">Sign up</button>
+                    </div>
+                </form>
+            </div>
         );
     }
 }

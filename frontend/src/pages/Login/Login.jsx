@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
-import { Button, Input , LoginContainer, LoginWrapper, Label, TextWrapper, MainHeader} from './Login.styled'
 
 class Login extends Component {
     constructor() {
@@ -46,47 +44,45 @@ class Login extends Component {
         const { errors } = this.state;
 
         return (
-            <LoginContainer>
-                <div>
-                    <TextWrapper>
-                        <MainHeader>Welcome to Cloud Haven!</MainHeader>
-                    </TextWrapper>
-                    <LoginWrapper>
-                        <Label>Sign In</Label>
-                        <form noValidate onSubmit={this.onSubmit}>
-                            <div>
-                                <span className="red-text">
-                                    {errors.email}
-                                    {errors.emailnotfound}
-                                </span>
-                                <Input placeholder="Email"
-                                    onChange={this.onChange}
-                                    value={this.state.email}
-                                    error={errors.email}
-                                    id="email"
-                                    type="email"
-                                />
-                            </div>
-                            <div>
-                                <span className="red-text">
-                                    {errors.password}
-                                    {errors.passwordincorrect}
-                                </span>
-                                <Input placeholder="Password"
-                                    onChange={this.onChange}
-                                    value={this.state.password}
-                                    error={errors.password}
-                                    id="password"
-                                    type="password"
-                                />
-                            </div>
-                            <div>
-                                <Button type="submit">Login</Button>
-                            </div>
-                        </form>
-                    </LoginWrapper>
-                </div>
-            </LoginContainer>
+            <div>
+                <h4>
+                    <b>Login</b> below
+                </h4>
+
+                <form noValidate onSubmit={this.onSubmit}>
+                    <div>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.email}
+                            error={errors.email}
+                            id="email"
+                            type="email"
+                        />
+                        <label htmlFor="email">Email</label>
+                        <span className="red-text">
+                            {errors.email}
+                            {errors.emailnotfound}
+                        </span>
+                    </div>
+                    <div>
+                        <input
+                            onChange={this.onChange}
+                            value={this.state.password}
+                            error={errors.password}
+                            id="password"
+                            type="password"
+                        />
+                        <label htmlFor="password">Password</label>
+                        <span className="red-text">
+                            {errors.password}
+                            {errors.passwordincorrect}
+                        </span>
+                    </div>
+                    <div>
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
         );
     }
 }
