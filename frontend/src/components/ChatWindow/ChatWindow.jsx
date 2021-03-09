@@ -1,95 +1,65 @@
 import React, { Component } from "react";
-import ChatFriend from "../ChatFriend/ChatFriend";
-import ChatBubble from "../ChatBubble/ChatBubble";
-import {
-    Container,
-    Background,
-    SideBar,
-    SearchRow,
-    SearchForm,
-    FriendList,
-    ScrollList,
-    ButtonContainer,
-    AddButton,
-    Main,
-    TopRow,
-    Title,
-    CloseIcon,
-    Body,
-    Text,
-    ChatRow,
-    AttachmentIcon,
-    ChatInput,
-} from "./ChatWindow.styled";
+import ChatBox from "react-chat-plugin";
+import { Container } from "./ChatWindow.styled";
 
 export default class ChatWindow extends Component {
+    state = {
+        messages: [
+            {
+                author: {
+                    username: "user1",
+                    id: 1,
+                    avatarUrl:
+                        "https://image.flaticon.com/icons/svg/2446/2446032.svg",
+                },
+                text: "Hi",
+                type: "text",
+                timestamp: 1578366393250,
+            },
+            {
+                author: { username: "user2", id: 2, avatarUrl: null },
+                text: "Show a button",
+                type: "text",
+                timestamp: 1578366425250,
+            },
+            {
+                author: {
+                    username: "user1",
+                    id: 1,
+                    avatarUrl:
+                        "https://image.flaticon.com/icons/svg/2446/2446032.svg",
+                },
+                text: "What's up?",
+                type: "text",
+                timestamp: 1578366425250,
+            },
+        ],
+    };
+
+    handleOnSendMessage = (message) => {
+        this.setState({
+            messages: this.state.messages.concat({
+                author: {
+                    username: "user1",
+                    id: 1,
+                    avatarUrl:
+                        "https://image.flaticon.com/icons/svg/2446/2446032.svg",
+                },
+                text: message,
+                timestamp: +new Date(),
+                type: "text",
+            }),
+        });
+    };
+
     render() {
         return (
             <Container>
-                <Background>
-                    <SideBar>
-                        <SearchRow>
-                            <SearchForm type="text" placeholder="Search..." />
-                        </SearchRow>
-                        <FriendList>
-                            <ScrollList>
-                                {/* TODO: Cleanup */}
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                                <ChatFriend />
-                            </ScrollList>
-                        </FriendList>
-                        <ButtonContainer>
-                            {/* TODO: Add ability to add new friends to list from database */}
-                            <AddButton>
-                                <p>+</p>
-                            </AddButton>
-                        </ButtonContainer>
-                    </SideBar>
-                    <Main>
-                        <TopRow>
-                            <Title>Some Name</Title>
-                            <CloseIcon></CloseIcon>
-                        </TopRow>
-                        <Body>
-                            <Text>
-                                {/* TODO: Cleanup */}
-                                <ChatBubble isUser/>
-                                <ChatBubble/>
-                                <ChatBubble/>
-                                <ChatBubble/>
-                                <ChatBubble/>
-                                <ChatBubble isUser/>
-                                <ChatBubble isUser/>
-                                <ChatBubble/>
-                                <ChatBubble isUser/>
-                                <ChatBubble/>
-                                <ChatBubble/>  
-                                <ChatBubble isUser/>  
-                                <ChatBubble isUser/>
-                                <ChatBubble isUser/>
-                                <ChatBubble isUser/>
-                                <ChatBubble isUser/>
-                                <ChatBubble isUser/>
-                            </Text>
-                        </Body>
-                        <ChatRow>
-                            <AttachmentIcon />
-                            <ChatInput
-                                type="text"
-                                placeholder="Type something"
-                            />
-                        </ChatRow>
-                    </Main>
-                </Background>
+                <ChatBox
+                    messages={this.state.messages}
+                    userId={1}
+                    onSendMessage={this.handleOnSendMessage}
+                />
             </Container>
         );
     }

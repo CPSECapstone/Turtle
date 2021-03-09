@@ -4,22 +4,21 @@ import { palette } from '../../styles/palette';
 export const Background = styled.div`
     flex: 3;
     background-color: transparent;
+    color: black;
 `;
 
 export const Container = styled.div`
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-radius: 30px;
     background-color: ${palette.LIGHT_CHARCOAL};
-    height: 100%;
     padding: 48px 32px;
+    height: 100%;
 `;
 
 export const Column = styled.div`
     display: flex;
     flex-direction: column;
     background-color: ${palette.WHITE_TEAL};
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
     height: 100%;
 `;
 
