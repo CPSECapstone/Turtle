@@ -20,7 +20,7 @@ class NavBar extends Component {
                     <>
                         {auth.isAuthenticated ? (
                             <>
-                                <button onClick={logoutUser}>Sign out</button>
+                                <StyledLinked onClick={logoutUser}>Sign out</StyledLinked>
                                 <p key={3}>{`Logged in as: You`}</p>
                             </>
                         ) : (

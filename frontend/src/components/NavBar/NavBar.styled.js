@@ -39,7 +39,7 @@ export const NavLogo = styled.a`
     }
   `;
 
-  export const Header = styled.h2`
+export const Header = styled.h2`
     text-align: center;
     color: black;
     font-family: 'Trebuchet MS', sans-serif;

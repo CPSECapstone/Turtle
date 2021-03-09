@@ -51,7 +51,6 @@ class Login extends Component {
                     <TextWrapper>
                         <MainHeader>Welcome to Cloud Haven!</MainHeader>
                     </TextWrapper>
-                    
                     <LoginWrapper>
                         <Label>Sign In</Label>
                         <form noValidate onSubmit={this.onSubmit}>
