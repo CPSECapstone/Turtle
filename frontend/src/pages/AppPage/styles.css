@@ -1,0 +1,53 @@
+.ui.search {
+  text-align: left;
+  height: 40px;
+  padding-left: 10px;
+  padding-bottom: 30px;
+}
+
+#growth {
+  overflow-y: scroll;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.ui.icon.input {
+  border-radius:10em;
+  width: 33%;
+  height: 40px;
+  border-color: orange;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+  font-weight: 400;
+}
+
+.prompt{
+  height: 40px;
+  width: 100%;
+  border-width: 0;
+  border-radius: 10em;
+  padding-left: 20px;
+  font-size: medium;
+  border-width: 5px;
+  border-color: #F87733;
+  background-color: #4d7d86;
+  color: white;
+  font-weight: 400;
+}
+
+i {
+  cursor: pointer;
+}

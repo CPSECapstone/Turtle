@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Title, LineBreak, Apps } from "./AppPage.styled";
-import AppList from "../../components/AppList/AppList";
+import AppStore from "./AppStore";
+import "./styles.css";
 
 export default class AppPage extends Component {
     render() {
@@ -8,7 +9,7 @@ export default class AppPage extends Component {
             <Container>
                 <Title>Apps</Title>
                 <LineBreak />
-                <Apps children={<AppList />} />
+                <AppStore />
             </Container>
         );
     }
