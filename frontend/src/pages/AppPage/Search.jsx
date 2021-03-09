@@ -1,20 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
+import { SearchBar, Input, Field } from "./AppStore.styled";
 
 const Search = props => {
 
   return (
-    <div className="ui search">
-      <div className="ui icon input">
-        <input
+    <SearchBar>
+      <Input>
+        <Field
           value={props.appValue}
           onChange={props.onChangeHandler}
           className="prompt"
           type="text"
           placeholder="Search Apps"
         />
-      </div>
+      </Input>
       <div className="results" />
-    </div>
+    </SearchBar>
   );
 };
 

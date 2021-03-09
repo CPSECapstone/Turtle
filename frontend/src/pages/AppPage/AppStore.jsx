@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import AppDetails from "../../components/AppList/AppDetails.jsx";
-import Grid from '@material-ui/core/Grid';
-import ComponentCard from './AppCard.jsx';
 import Search from "./Search.jsx";
-
+import { Store , StyledGrid , AppCard, AppMedia} from "./AppStore.styled";
 
 class AppStore extends Component {
     state = {
@@ -24,6 +22,7 @@ class AppStore extends Component {
     };
 
     render() {
+
       //search using filter function
       const toSearch = searchTerm => item =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -31,7 +30,7 @@ class AppStore extends Component {
       const apps = this.state.apps
         .filter(toSearch(this.state.searchTerm))
         .map(app => (
-          <ComponentCard
+          <AppMedia
             id={app.id}
             name={app.name}
             backgroundColor={app.color}
@@ -40,23 +39,23 @@ class AppStore extends Component {
         ));
 
       return (
-        <div className="AppStore">
+        <Store>
           <Search
             contactsValue={this.state.searchTerm}
             onChangeHandler={this.onSearchHandler}
           />
-          <Grid className='grid' container spacing={4}
+          <StyledGrid container spacing={4}
             style={{padding: '5px'}}
             >
             {apps.map( app =>
-              <Grid key={app.id}
+              <AppCard key={app.id}
               item
-              xs={8} sm={4} md={3} lg={2} xl={1}
+              xs={10} sm={5} md={4} lg={3} xl={2}
               >
               {app}
-              </Grid> )}
-          </Grid>
-      </div>);
+              </AppCard> )}
+          </StyledGrid>
+      </Store>);
     }
 }
 
