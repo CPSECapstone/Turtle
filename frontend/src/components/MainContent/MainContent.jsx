@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { RiMessage2Line } from "react-icons/ri";
 import { ImCalendar } from "react-icons/im";
+import { Calendar } from '../Calendar/Calendar';
+import ChatWindow from '../ChatWindow/ChatWindow';
 import {
     Background,
     Container,
@@ -42,15 +44,22 @@ export default class MainContent extends Component {
                                 <RiMessage2Line /> Messages
                             </CommunicationItem>
                             <CommunicationItem
-                                active={activeItem == "Calender" ? true : false}
+                                active={activeItem == "Calendar" ? true : false}
                                 onClick={() =>
-                                    this.setState({ activeItem: "Calender" })
+                                    this.setState({ activeItem: "Calendar" })
                                 }
                             >
-                                <ImCalendar /> Calender
+                                <ImCalendar /> Calendar
                             </CommunicationItem>
                         </Row>
-                        {children}
+                        {activeItem == "Application" ? (
+                            children
+                        ) : activeItem == "Messages" ? (
+                            <ChatWindow></ChatWindow>
+                        ) : (
+                            <Calendar></Calendar>
+                        )}
+                        {/* {children} */}
                     </Column>
                 </Container>
             </Background>
