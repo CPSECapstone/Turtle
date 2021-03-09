@@ -5,7 +5,6 @@ import ComponentCard from './AppCard.jsx';
 import Search from "./Search.jsx";
 
 
-
 class AppStore extends Component {
     state = {
       searchTerm: "",

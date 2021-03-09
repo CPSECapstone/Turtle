@@ -48,6 +48,12 @@
   font-weight: 400;
 }
 
-i {
-  cursor: pointer;
+.card {
+  width: 200;
+  height: 200;
+  padding: 5px;
+}
+
+.media {
+  height: 200;
 }

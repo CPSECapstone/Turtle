@@ -3,7 +3,7 @@ import { Container } from "./Home.styled";
 import SideBar from "../../components/SideBar/SideBar";
 import MainContent from "../../components/MainContent/MainContent";
 import SideTab from "../../components/SideTab/SideTab";
-import { FaHome, FaPiggyBank, FaHospital } from "react-icons/fa";
+import { FaHome, FaPiggyBank, FaHospital, FaAppStore } from "react-icons/fa";
 
 export default class Home extends Component {
     state = {
@@ -36,6 +36,13 @@ export default class Home extends Component {
                         onclick={() => this.setState({ activeTab: "Hospital" })}
                     >
                         <FaHospital />
+                    </SideTab>
+                    <SideTab
+                        active={activeTab == "App Store" ? true : false}
+                        title="App Store"
+                        onclick={() => this.setState({ activeTab: "App Store" })}
+                    >
+                        <FaAppStore />
                     </SideTab>
                 </SideBar>
                 <MainContent><div>hi</div></MainContent>
