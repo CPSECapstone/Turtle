@@ -38,7 +38,7 @@ export default class Home extends Component {
                         <FaHospital />
                     </SideTab>
                 </SideBar>
-                <MainContent />
+                <MainContent><div>hi</div></MainContent>
             </Container>
         );
     }
