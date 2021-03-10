@@ -20,26 +20,26 @@ export const DropDownHeader = styled("div")`
 `;
 
 export const DropDownListContainer = styled("div")`
-    width: 160px;
+    width: 170px;
     margin: 0 auto;
 `;
 
 export const DropDownList = styled("ul")`
     padding: 0;
     margin: 0;
-    padding-left: 1px;
+    padding-left: 0px;
     background: #ffffff;
-    border: 0px solid #e5e5e5;
+    border: 3px solid #e5e5e5;
     box-sizing: border-box;
     color: #3faffa;
     font-size: 20px;
     font-weight: 600;
     &:first-child {
-        padding-top: 1px;
+        padding-top: 8px;
     }
 `;
 
 export const ListItem = styled("ul")`
     list-style: none;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 `;
