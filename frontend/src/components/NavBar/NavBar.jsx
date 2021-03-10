@@ -2,11 +2,8 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import DropDownMenu from "../DropDownMenu/DropDownMenu";
 import { logoutUser } from "../../actions/authActions";
-<<<<<<< HEAD
-import { MainNav, NavLogo, StyledLinked, Header, NavItemLocation} from "./NavBar.styled";
-import logo from '../../images/real.png';
-=======
 import {
     Container,
     UserRow,
@@ -14,7 +11,6 @@ import {
     Button,
     LoginContainer,
 } from "./NavBar.styled";
->>>>>>> 9162e8f8ea7cbef3c9621c571831e80b922f387c
 
 class NavBar extends Component {
     render() {
@@ -27,29 +23,6 @@ class NavBar extends Component {
         }
 
         return (
-<<<<<<< HEAD
-            <MainNav>
-            <NavLogo>
-                <img src={logo}/>
-            </NavLogo>
-            <Header>Cloud Haven</Header>
-               <NavItemLocation>
-                    <>
-                        {auth.isAuthenticated ? (
-                            <>
-                                <StyledLinked onClick={logoutUser}>Sign out</StyledLinked>
-                                <p key={3}>{`Logged in as: You`}</p>
-                            </>
-                        ) : (
-                            <>
-                                <StyledLinked to="login">Login</StyledLinked>
-                                <StyledLinked to="register">Register </StyledLinked>
-                            </>
-                        )}
-                    </>
-                </NavItemLocation>
-            </MainNav>
-=======
             <Container singleItem={location.pathname == "/landing-page"}>
                 {location.pathname !== "/landing-page" ? (
                     <Button filled to="/landing-page">
@@ -61,7 +34,8 @@ class NavBar extends Component {
 
                 {auth.isAuthenticated ? (
                     <UserRow>
-                        <Name key={3}>{`Logged in as: ${userName}`}</Name>
+                        {/* <Name key={3}>{`Logged in as: ${userName}`}</Name> */}
+                        <DropDownMenu></DropDownMenu>
                         <Button onClick={logoutUser}>Sign out</Button>
                     </UserRow>
                 ) : (
@@ -79,7 +53,6 @@ class NavBar extends Component {
                     </LoginContainer>
                 )}
             </Container>
->>>>>>> 9162e8f8ea7cbef3c9621c571831e80b922f387c
         );
     }
 }
