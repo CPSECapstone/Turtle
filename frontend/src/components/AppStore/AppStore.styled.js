@@ -6,7 +6,6 @@ import ComponentCard from './AppCard.jsx';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 
-
 export const Store = styled.div`
     padding:20px;
     background-color: #1a2b42;
@@ -33,6 +32,9 @@ export const StyledCard = styled(Card)`
     width: 150px;
     height: 150px;
     padding: 5px;
+`;
+
+export const AppMedia = styled(ComponentCard)`
 `;
 
 export const SearchBar = styled.div`
@@ -75,5 +77,3 @@ export const Input = styled.div`
     border-color: ${palette.LIGHT_ORANGE};
     color: white;
 `;
-
-export const Apps = styled.div``;
