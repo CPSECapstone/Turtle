@@ -30,7 +30,7 @@ export default function DropDownMenu() {
                 <DropDownListContainer>
                     <DropDownList>
                         {options.map(option => (
-                            <ListItem onClick = {onOptionClicked(option)} key={Math.random()}>
+                            <ListItem onClick = {() => onOptionClicked() } key={Math.random()}>
                                 {option}
                             </ListItem>
                         ))}
