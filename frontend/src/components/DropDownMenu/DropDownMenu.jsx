@@ -16,7 +16,7 @@ export default function DropDownMenu() {
 
     const toggling = () => setIsOpen(!isOpen);
 
-    const onOptionClicked = (value) => {
+    const onOptionClicked = value => () => {
         setSelectedOption(value);
         setIsOpen(false);
       };
