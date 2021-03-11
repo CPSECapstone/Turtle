@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { palette } from '../../styles/palette';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-import ComponentCard from './AppCard.jsx';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 

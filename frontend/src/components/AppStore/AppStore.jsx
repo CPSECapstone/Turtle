@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import AppDetails from "../../utils/AppDetailsExamples.jsx";
 import Search from "./Search.jsx";
-import { Store , StyledGrid , AppCard, AppMedia} from "./AppStore.styled";
+import { Store , StyledGrid , AppCard } from "./AppStore.styled";
+import ComponentCard from './AppCard.jsx';
 
 class AppStore extends Component {
     state = {
@@ -32,7 +33,7 @@ class AppStore extends Component {
       const apps = this.state.apps
         .filter(toSearch(this.state.searchTerm))
         .map(app => (
-          <AppMedia
+          <ComponentCard
             id={app.id}
             name={app.name}
             backgroundColor={app.color}
