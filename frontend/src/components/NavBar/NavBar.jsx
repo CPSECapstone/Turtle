@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import DropDownMenu from "../DropDownMenu/DropDownMenu";
 import { logoutUser } from "../../actions/authActions";
 import {
     Container,
@@ -33,7 +34,8 @@ class NavBar extends Component {
 
                 {auth.isAuthenticated ? (
                     <UserRow>
-                        <Name key={3}>{`Logged in as: ${userName}`}</Name>
+                        {/* <Name key={3}>{`Logged in as: ${userName}`}</Name> */}
+                        <DropDownMenu></DropDownMenu>
                         <Button onClick={logoutUser}>Sign out</Button>
                     </UserRow>
                 ) : (

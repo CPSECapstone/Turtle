@@ -43,7 +43,7 @@ if (localStorage.jwtToken) {
 }
 
 function App () {
-    return (
+    return ( 
         <Provider store={store}>
             <Router>
                 <Container>
