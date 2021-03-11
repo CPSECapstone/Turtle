@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AppDetails from "../../components/AppList/AppDetails.jsx";
+import AppDetails from "../../utils/AppDetailsExamples.jsx";
 import Search from "./Search.jsx";
 import { Store , StyledGrid , AppCard, AppMedia} from "./AppStore.styled";
 
@@ -15,7 +15,7 @@ class AppStore extends Component {
       });
     }
 
-    onSearchHandler = e => {
+    onSearchHandler = (e) => {
       this.setState({
         searchTerm: e.target.value
       });
@@ -23,10 +23,12 @@ class AppStore extends Component {
 
     render() {
 
-      //search using filter function
-      const toSearch = searchTerm => item =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase());
-  
+      const toSearch = (searchTerm) => {
+        return (item) => {
+          return item.name.toLowerCase().includes(searchTerm.toLowerCase());
+        }
+      }
+
       const apps = this.state.apps
         .filter(toSearch(this.state.searchTerm))
         .map(app => (

@@ -11,8 +11,9 @@ import CardActions from '@material-ui/core/CardActions';
 
 export const Store = styled.div`
     padding:20px;
-    background-color: white;
-    height: 100%
+    background-color: #1a2b42;
+    height: 100%;
+    border-radius: 10px;
 `;
 
 export const Content = styled(CardContent)`
@@ -27,7 +28,7 @@ export const AddButton = styled(CardActions)`
 `;
 
 export const AppCard = styled.div`
-    padding: 10px;
+    padding: 25px;
 `;
 
 export const StyledCard = styled(Card)`
@@ -43,13 +44,15 @@ export const SearchBar = styled.div`
     text-align: left;
     height: 40px;
     padding-left: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    padding-top: 10px
 `;
 
 export const StyledGrid = styled(Grid)`
     display: flex;
     justify-content: space-around;
     overflow: hidden;
+    justify-content: flex-start;
 `;
 export const Field = styled.input`
     height: 40px;

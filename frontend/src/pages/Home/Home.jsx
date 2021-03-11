@@ -4,7 +4,6 @@ import SideBar from "../../components/SideBar/SideBar";
 import MainContent from "../../components/MainContent/MainContent";
 import SideTab from "../../components/SideTab/SideTab";
 import { FaHome, FaPiggyBank, FaHospital, FaAppStore } from "react-icons/fa";
-import AppStore from "../AppPage/AppStore";
 
 export default class Home extends Component {
     state = {
@@ -46,7 +45,7 @@ export default class Home extends Component {
                         <FaAppStore />
                     </SideTab>
                 </SideBar>
-                <MainContent><div><AppStore></AppStore></div></MainContent>
+                <MainContent></MainContent>
             </Container>
         );
     }

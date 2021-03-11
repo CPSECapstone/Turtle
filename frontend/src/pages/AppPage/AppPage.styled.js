@@ -20,5 +20,3 @@ export const LineBreak = styled.div`
     border: 1px solid ${palette.LIGHT_ORANGE};
     margin: 64px 0;
 `;
-
-export const Apps = styled.div``;

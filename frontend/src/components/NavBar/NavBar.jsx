@@ -34,6 +34,7 @@ class NavBar extends Component {
                 {auth.isAuthenticated ? (
                     <UserRow>
                         <Name key={3}>{`Logged in as: ${userName}`}</Name>
+                        <Button filled to="/app-page">App Store</Button>
                         <Button onClick={logoutUser}>Sign out</Button>
                     </UserRow>
                 ) : (

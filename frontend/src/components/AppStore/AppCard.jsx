@@ -1,10 +1,8 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import {StyledCard, AddButton, Content} from "./AppStore.styled";
+import { StyledCard, AddButton, Content } from "./AppStore.styled";
 
-
-// customizable cards for each component being rendered.
 export default function ComponentCard({name, id, backgroundColor, color}) {
   
   return (
