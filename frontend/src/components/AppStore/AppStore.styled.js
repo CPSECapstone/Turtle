@@ -7,8 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 
 
-//Container, TitleRow, Title, LineBreak, Apps
-
 export const Store = styled.div`
     padding:20px;
     background-color: #1a2b42;
@@ -35,9 +33,6 @@ export const StyledCard = styled(Card)`
     width: 150px;
     height: 150px;
     padding: 5px;
-`;
-
-export const AppMedia = styled(ComponentCard)`
 `;
 
 export const SearchBar = styled.div`
