@@ -7,7 +7,7 @@ import {
     ListItem
 } from "./DropDownMenu.styled";
 
-const options = ["Joe Johnson", "Account", "Questions"];
+const options = ["Apps", "Account", "Questions"];
 
 export default function DropDownMenu() {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ export default function DropDownMenu() {
     return (
         <Container>
             <DropDownHeader onClick={toggling}>
-                {selectedOption || "Joe Johnson"}
+                {selectedOption || "Welcome, Joe!"}
             </DropDownHeader>
             {isOpen && (
                 <DropDownListContainer>
