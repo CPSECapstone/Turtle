@@ -10,7 +10,6 @@ export const MainHeader = styled.h1`
   top: 1%;
 `;
 
-
 export const TextWrapper = styled.body`
   position: absolute;
   top: 50%;
@@ -26,7 +25,6 @@ export const TextWrapper = styled.body`
   border-radius: 20px;
 
 `;
-
 
 export const Button = styled.button`
   /* This renders the buttons above... Edit me! */
@@ -64,7 +62,6 @@ export const Input = styled.input`
   ::placeholder {
     font-family: 'Trebuchet MS', sans-serif;
   }
- 
 `;
 
 export const Label = styled.label`
@@ -78,8 +75,6 @@ export const Label = styled.label`
  font-size: 30px;
  font-weight: bold;
 `;
-
-
 
 export const LoginWrapper = styled.body`
   position: absolute;

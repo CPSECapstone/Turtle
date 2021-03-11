@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 import gray from '../../images/gray.jpg';
 
-
 export const Button = styled.button`
-  /* This renders the buttons above... Edit me! */
   display: inline-block;
   font-family: 'Trebuchet MS', sans-serif;
   border-radius: 20px; //button shape
@@ -38,7 +36,6 @@ export const Input = styled.input`
   ::placeholder {
     font-family: 'Trebuchet MS', sans-serif;
   }
- 
 `;
 
 export const Label = styled.label`
@@ -52,8 +49,6 @@ export const Label = styled.label`
  font-size: 30px;
  font-weight: bold;
 `;
-
-
 
 export const Wrapper = styled.body`
   position: absolute;

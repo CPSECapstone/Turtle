@@ -16,12 +16,10 @@ export default function DropDownMenu() {
 
     const toggling = () => setIsOpen(!isOpen);
 
-    const onOptionClicked = value => () => {
+    const onOptionClicked = (value) => {
         setSelectedOption(value);
         setIsOpen(false);
-        console.log(selectedOption);
       };
-    
     
     return (
         <Container>
@@ -32,7 +30,7 @@ export default function DropDownMenu() {
                 <DropDownListContainer>
                     <DropDownList>
                         {options.map(option => (
-                            <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
+                            <ListItem onClick = {onOptionClicked(option)} key={Math.random()}>
                                 {option}
                             </ListItem>
                         ))}

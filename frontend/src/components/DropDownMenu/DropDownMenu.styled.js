@@ -11,7 +11,8 @@ export const Container = styled.div`
     }
 `;
 
-export const DropDownHeader = styled("div")`
+export const DropDownHeader = styled.div`
+    padding-top: 12px;
     margin-bottom: 10px;
     padding: 5px 16px 5px 20px;
     font-weight: 500;
@@ -20,12 +21,13 @@ export const DropDownHeader = styled("div")`
     background: #ffffff;
 `;
 
-export const DropDownListContainer = styled("div")`
+export const DropDownListContainer = styled.div`
+    padding-top: 12px;
     width: 160px;
     margin: 0 auto;
 `;
 
-export const DropDownList = styled("ul")`
+export const DropDownList = styled.ul`
     padding: 0;
     margin: 0;
     padding-left: 0px;
@@ -40,7 +42,7 @@ export const DropDownList = styled("ul")`
     }
 `;
 
-export const ListItem = styled("ul")`
+export const ListItem = styled.ul`
     list-style: none;
     margin-bottom: 8px;
 `;
