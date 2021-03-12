@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Title, LineBreak, Apps } from "./AppPage.styled";
+import { Container, Title, LineBreak } from "./AppPage.styled";
 import AppStore from "../../components/AppStore/AppStore";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { palette } from '../../styles/palette';
 
-//Container, TitleRow, Title, LineBreak, Apps
 
 export const Container = styled.div`
     margin: 0 32px;
