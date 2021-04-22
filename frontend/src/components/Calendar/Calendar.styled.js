@@ -4,6 +4,7 @@ import * as React from 'react';
 export const Frame = styled.div`
   width: 400px;
   border: 1px solid lightgrey;
+  align-items: center;
   box-shadow: 2px 2px 2px grey;
 `;
 
@@ -13,6 +14,7 @@ export const Header = styled.div`
   padding: 10px 10px 5px 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: grey;
 `;
 
@@ -24,6 +26,7 @@ export const Body = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 `;
 
 export const Day = styled.div`
