@@ -12,7 +12,8 @@ import {
     DAYS,
     DAYS_LEAP,
     DAYS_OF_THE_WEEK,
-    MONTHS
+    MONTHS,
+    ISLEAPYEAR
 } from "../../utils/constants"
 
 export function Calendar() {
@@ -21,9 +22,6 @@ export function Calendar() {
       return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
   }
 
-  const isLeapYear = (year) => {
-    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-  }
 
   const today = new Date();
   const [date, setDate] = useState(today);
@@ -40,7 +38,7 @@ export function Calendar() {
     setStartDay(getStartDayOfMonth(date));
   }, [date]);
 
-  const days = isLeapYear(date.getFullYear()) ? DAYS_LEAP : DAYS;
+  const days = ISLEAPYEAR(date.getFullYear()) ? DAYS_LEAP : DAYS;
 
   return (
     <Frame>
@@ -66,7 +64,9 @@ export function Calendar() {
                 key={index}
                 isToday={d === today.getDate()}
                 isSelected={d === day}
-                onClick={() => setDate(new Date(year, month, d))}
+                // onClick={
+                //   today.getDate()
+                // }
               >
                 {d > 0 ? d : ''}
               </Day>
