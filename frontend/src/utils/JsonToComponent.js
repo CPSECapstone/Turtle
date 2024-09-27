@@ -1,45 +1,42 @@
-import React from 'react';
-import data from '../mockInputs/devComponents.json';
+import React, {useState, useEffect} from 'react';
+import Grid from '@material-ui/core/Grid';
+import ComponentCard from './ComponentCard.jsx';
 
-function createBox (value) {
-  var boxStyle = {
-    backgroundColor: value.color,
-    height: value.height,
-    width: value.width,
-    color: value.textColor
-  };
+// Creates a grid of components, fetched from a mock API pull
+export function CreateComponents() {
 
-  return (
-    <div style={boxStyle}>
-      <h1 style={{ color: 'white' }}>{value.id}</h1>
-    </div>
-  );
+  const [components, setComponents] = useState([])
+    useEffect(()=>{
+      async function fetchData() {
+          setComponents(
+        await fetch('https://run.mocky.io/v3/e3d96faa-fe23-4e8a-b83a-bb363f3d4798')
+            .then(res => res.json())
+            .then(res => res.components)
+            .catch(err => console.log(err, 'warning'))
+          )
+      }
+      fetchData();
+    } ,[])
+
+      return (
+        <div className="Components">
+        <h3>COMPONENT GRID</h3>
+        <Grid container spacing={10}
+        style={{padding: '24px'}}
+        >
+        {components.map( components =>
+        <Grid key={components.id}
+        item
+        xs={12} sm={6} md={4} lg={4} xl={3}
+        >
+        <ComponentCard
+        type={components.type}
+        id={components.id}
+        backgroundColor={components.color}
+        color={components.textColor}
+        />
+        </Grid> )}
+        </Grid>
+        </div>);
 }
 
-function createTextBox (value) {
-  var textBoxStyle = {
-    backgroundColor: value.color,
-    height: value.height,
-    width: value.width,
-    color: value.textColor
-  };
-
-  return (
-    <div style={textBoxStyle}>
-      <h1 style={{ color: 'white' }}>{value.id}</h1>
-      <nl style={textBoxStyle}>{value.body}</nl>
-    </div>
-  );
-}
-
-export function createComponents () {
-  const elements = data.components.map(value => {
-    if (value.type === 'text') {
-      return createTextBox(value);
-    } else if (value.type === 'box') {
-      return createBox(value);
-    }
-  });
-
-  return elements;
-}
